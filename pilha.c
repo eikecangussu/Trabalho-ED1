@@ -14,11 +14,11 @@ Pilha *iniciaPilha(){
 }
 
 Pilha *esvazia(Pilha *p){
-    No *aux = p->topo;
-    while (aux != NULL){
-        aux = p->topo->ant;
-        free(p->topo);
-        p->topo = aux;
+    No *aux;
+    while (p->topo != NULL){
+        aux = p->topo;
+        p->topo = p->topo->prox;
+        free(aux);
     }
     p->tamanho = 0;
     return p;
@@ -29,27 +29,19 @@ bool vazia(Pilha *p){
     else return false;
 }
 
-Pilha *empilha(Pilha *p, void *chave){
+void empilha(Pilha *p, void *chave){
     No *novo = criaNo(chave);
-    if (p->topo != NULL){
-        p->topo->prox = novo;
-        p->topo->prox->ant = p->topo;
-        p->topo = p->topo->prox;
-    }else{
-        p->topo = novo;
-    }
+    novo->prox = p->topo;
+    p->topo = novo;
     p->tamanho++;
-    return p;
 }
 
 void *desempilha(Pilha *p){
     void *removido = NULL;
     if(p->topo != NULL){
+        removido = p->topo->ch;
         No *aux = p->topo;
-        p->topo = aux->ant;
-        p->topo->prox = NULL;
-        p->tamanho--;
-        removido = aux->ch;
+        p->topo = p->topo->prox;
         free(aux);
     }
     return removido;

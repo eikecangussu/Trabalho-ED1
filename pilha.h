@@ -8,7 +8,7 @@
 
 typedef struct no{
     void* ch;
-    struct no *ant, *prox;
+    struct no *prox;
 }No;
 
 typedef struct pilha{
@@ -42,7 +42,7 @@ Pilha *p: Pilha a ser esvaziada.
 Saída: Ponteiro para estrutura Pilha esvaziada.
 
 */
-Pilha esvazia(Pilha *p);
+Pilha *esvazia(Pilha *p);
 
 /*
 Função: vazia
@@ -69,7 +69,7 @@ void *novo: Ponteiro para dado de tipo genérico a ser inserido na pilha.
 Saída: void.
 
 */
-void empilha(Pilha *p, void *novo);
+void empilha(Pilha *p, void *chave);
 
 /*
 Função: desempilha
@@ -82,7 +82,7 @@ Pilha *p: Ponteiro para a pilha a que terá um elemento excluído do seu topo.
 Saída: Elemento removido da pilha ou NULL se a pilha já estiver vazia.
 
 */
-void desempilha(Pilha *p);
+void *desempilha(Pilha *p);
 
 /*
 Função: tamanho
@@ -109,5 +109,7 @@ Saída: Ponteiro para pilha inicializada com tamanho = 0, topo = NULL
 
 */
 Pilha *iniciaPilha();
+
+
 
 #endif
