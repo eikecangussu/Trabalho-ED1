@@ -110,6 +110,17 @@ Saída: Ponteiro para pilha inicializada com tamanho = 0, topo = NULL
 */
 Pilha *iniciaPilha();
 
+/*
+Função: destroiPilha(Pilha *P)
 
+Descrição: Destroi completamente uma pilha vazia.
+
+Entrada: 
+Ponteiro para a pilha a ser destruida
+
+Saida: void
+
+*/
+void destroiPilha(Pilha *P);
 
 #endif

@@ -50,3 +50,10 @@ void *desempilha(Pilha *p){
 int tamanho(Pilha *p){
     return p->tamanho;
 }
+
+void destroiPilha(Pilha *P){
+    if (P != NULL){
+        esvazia(P);
+        free(P);
+    }
+}
