@@ -1,3 +1,11 @@
+/*
+Grupo 9: 
+Eike Cangussu 
+Matheus Alves
+Guilherme Lima
+Gabriel Amaral
+*/
+
 #include "pilha.h"
 
 No *criaNo(void *chave){
@@ -63,4 +71,5 @@ void *mostrarTopo(Pilha *p){
         return NULL; // Retorna NULL caso o topo da pilha está vazio
     }
     return p->topo->ch; // Retorna a chave do topo caso o topo da pilha seja diferente de NULL
+
 }
