@@ -22,7 +22,8 @@ typedef struct pilha{
 /*
 Função: criaNo
 
-Descrição: Aloca dinamicamente uma estrutura No e ...
+Descrição: Recebe um ponteiro para void* com o endereço para uma chave genérica aloca dinamicamente 
+uma estrutura No e preenche com a chave recebida o campo ch e com NULL no campo prox.
 
 Entrada:
 void *chave: ponteiro para a chave de informação de tipo genérico guardada no nó.
@@ -136,6 +137,7 @@ Saida: void * Chave do elemento no topo da pilha ou NULL caso estiver vazia.
 
 */
 void *mostrarTopo(Pilha *p);
+
 
 
 #endif
