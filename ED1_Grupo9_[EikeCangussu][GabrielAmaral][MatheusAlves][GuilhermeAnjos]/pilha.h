@@ -1,3 +1,11 @@
+/*
+Grupo 9: 
+Eike Cangussu 
+Matheus Alves
+Guilherme Lima
+Gabriel Amaral
+*/
+
 #ifndef __PILHA_H__
 #define __PILHA_H__
 
@@ -141,3 +149,4 @@ void *mostrarTopo(Pilha *p);
 
 
 #endif
+
