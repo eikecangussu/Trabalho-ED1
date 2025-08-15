@@ -1,3 +1,11 @@
+/*
+Grupo 9: 
+Eike Sousa Cangussu 
+Matheus Alves Martins
+Guilherme Lima dos Anjos
+Gabriel Meireles Amaral
+*/
+
 #include "pilha.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -153,5 +161,6 @@ int main(){
 
     return 0;
 }
+
 
 
