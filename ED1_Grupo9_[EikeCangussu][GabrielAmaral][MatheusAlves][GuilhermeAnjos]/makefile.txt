@@ -1,13 +1,13 @@
-all: teste1 teste2 teste3
+all: problema1 problema2 problema3
 
-teste1: pilha.o problema1.o
-	gcc -o teste1 pilha.o problema1.o
+problema1: pilha.o problema1.o
+	gcc -o problema1 pilha.o problema1.o
 
-teste2: pilha.o problema2.o
-	gcc -o teste2 pilha.o problema2.o
+problema2: pilha.o problema2.o
+	gcc -o problema2 pilha.o problema2.o
 
-teste3: pilha.o problema3.o
-	gcc -o teste3 pilha.o problema3.o
+problema3: pilha.o problema3.o
+	gcc -o problema3 pilha.o problema3.o
 
 pilha.o: pilha.c pilha.h
 	gcc -c pilha.c -Wall -Werror -Wextra
@@ -22,4 +22,4 @@ problema3.o: problema3.c pilha.h
 	gcc -c problema3.c -Wall -Werror -Wextra
 
 clean:
-	rm -rf *.o teste1 teste2 teste3
+	rm -rf *.o problema1 problema2 problema3
