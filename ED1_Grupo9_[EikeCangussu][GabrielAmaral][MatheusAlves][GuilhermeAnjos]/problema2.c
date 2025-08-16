@@ -5,7 +5,7 @@ Matheus Alves
 Guilherme Lima
 Gabriel Amaral
 */
-#include "Pilha.h"
+#include "pilha.h"
 #include <string.h>
 
 bool expressaoValida(char *infixa) {
@@ -14,7 +14,7 @@ bool expressaoValida(char *infixa) {
         Retorna true se for válida, false caso contrário
     */
     int parenCount = 0;
-    int contaexpressao = 0;
+    //int contaexpressao = 0;
     for (int i = 0; infixa[i] != '\0'; i++) {
         if (infixa[i] == '(') {
             parenCount++;
@@ -197,4 +197,5 @@ int main() {
     }
 
     return 0;
+
 }
