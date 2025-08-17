@@ -174,19 +174,19 @@ int main() {
         printf("Digite sua escolha: ");
         scanf("%d", &escolha);
         
-        if (escolha == 1) { // Corrige a lógica para a escolha correta
+        if (escolha == 1) {
             printf("Digite a expressao em forma Posfixa (use A-J como variaveis): ");
             getchar(); // Limpa o buffer do teclado
             fgets(infixa, sizeof(infixa), stdin);
             infixa[strcspn(infixa, "\n")] = 0; // Remove o newline
-            printf("\ninfixa:%s\n", infixa);
+            printf("\nPosfixa:%s\n", infixa);
         } 
         else if (escolha == 2) {
             printf("Digite a expressao em forma Infixa (use A-J como variaveis): ");
             getchar(); // Limpa o buffer do teclado
             fgets(infixa, sizeof(infixa), stdin);
             infixa[strcspn(infixa, "\n")] = 0; // Remove o newline
-            if(!expressaoValida(infixa)) {
+            if(!expressaoValida(infixa)) {// Verifica se a expressão é válida
                 printf("Erro: Parenteses nao balanceados na expressao.\n");
                 continue; // Volta ao menu sem chamar converteInfixa
             }
