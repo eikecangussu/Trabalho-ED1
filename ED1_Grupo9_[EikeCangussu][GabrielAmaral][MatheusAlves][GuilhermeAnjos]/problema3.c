@@ -64,7 +64,7 @@ void buscaComodo(int n, int m, int i, int j) /* Funçao para buscar comodos */
     destroiPilha(p); /*libera toda a memoria usada pela pilha*/
 }
 
-int main(void)
+int main()
 {
     int comodos = 0; /*contador de comodos*/
     char linha[MAX]; /*buffer para ler as linhas do terminal*/
@@ -115,4 +115,5 @@ int main(void)
     printf("%d\n", comodos); /* escreve no terminal a quantidade de cômodos*/
 
     return 0; /*encerra o programa*/
+
 }
