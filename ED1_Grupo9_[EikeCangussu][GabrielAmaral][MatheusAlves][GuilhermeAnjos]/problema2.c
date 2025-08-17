@@ -5,7 +5,7 @@ Matheus Alves
 Guilherme Lima
 Gabriel Amaral
 */
-#include "pilha.h"
+#include "Pilha.h"
 #include <string.h>
 
 bool expressaoValida(char *infixa) {
@@ -14,7 +14,6 @@ bool expressaoValida(char *infixa) {
         Retorna true se for válida, false caso contrário
     */
     int parenCount = 0;
-    //int contaexpressao = 0;
     for (int i = 0; infixa[i] != '\0'; i++) {
         if (infixa[i] == '(') {
             parenCount++;
@@ -187,6 +186,10 @@ int main() {
             getchar(); // Limpa o buffer do teclado
             fgets(infixa, sizeof(infixa), stdin);
             infixa[strcspn(infixa, "\n")] = 0; // Remove o newline
+            if(!expressaoValida(infixa)) {
+                printf("Erro: Parenteses nao balanceados na expressao.\n");
+                continue; // Volta ao menu sem chamar converteInfixa
+            }
             converteInfixa(infixa);
             
         } else if (escolha == 3) {
@@ -197,5 +200,4 @@ int main() {
     }
 
     return 0;
-
 }
