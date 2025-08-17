@@ -22,7 +22,7 @@ typedef struct pilha{
 /*
 Função: criaNo
 
-Descrição: Aloca dinamicamente uma estrutura No e ...
+Descrição: Aloca dinamicamente uma estrutura No e preenche seus campos.
 
 Entrada:
 void *chave: ponteiro para a chave de informação de tipo genérico guardada no nó.
@@ -61,7 +61,7 @@ bool vazia(Pilha *p);
 /*
 Função: empilha
 
-Descrição: Adiciona um novo elemento no topo da pilha e atualiza o novo topo.
+Descrição: Cria um nó com o dado recebido, adiciona um novo elemento no topo da pilha, atualiza o novo topo e aumenta o tamanho.
 
 Entrada:
 Pilha *p: Ponteiro para a pilha que receberá um novo elemento no seu topo.
@@ -114,7 +114,7 @@ Pilha *iniciaPilha();
 /*
 Função: destroiPilha(Pilha *P)
 
-Descrição: Destroi completamente uma pilha vazia.
+Descrição: Esvazia e destrói completamente uma pilha.
 
 Entrada: 
 Ponteiro para a pilha a ser destruida
@@ -136,6 +136,7 @@ Saida: void * Chave do elemento no topo da pilha ou NULL caso estiver vazia.
 
 */
 void *mostrarTopo(Pilha *p);
+
 
 
 #endif
